@@ -13,7 +13,9 @@ services:
       - postgres-data:/var/lib/postgresql/data
 
   tkinter_app:
-    image: lisafe/devops_lab_app:MIS_app
+    build:
+      context: .
+      dockerfile: Dockerfile
     depends_on:
       - db
     environment:
