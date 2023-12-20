@@ -6,7 +6,7 @@ class DatabaseAuth():
     def __init__(self):
         try:
             self.connection = psycopg2.connect(
-                host="db",
+                host="localhost",
                 user="postgres",
                 password="qwerty",
                 database="postgres"
@@ -92,7 +92,7 @@ class DatabaseAuth():
     def insertData(self,FIO, name, password, role):
         self.cur.execute("INSERT INTO log(FIO, login, password, role) VALUES ('"+FIO+"', '"+name+"', '"+password+"', '"+role+"')")
         self.connection.commit()
-    
+        
     def checkData(self, data, inputData): #data - username, inputdata = username, password
         query = "SELECT login, password FROM log WHERE login = %s"
         self.cur.execute(query, data)
@@ -188,3 +188,9 @@ class DatabaseAuth():
         self.cur.execute(query, login)
         row = self.cur.fetchone()
         return row[0]
+
+    def del_user(self, login):
+        self.cur.execute("DELETE FROM log WHERE login = '"+login+"'")
+        self.connection.commit()
+        print("User",login,"Deleted.")
+        
