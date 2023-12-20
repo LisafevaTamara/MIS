@@ -10,8 +10,6 @@ class AdminPanel:
         self.root = Tk()
         self.root.title('My App')
         self.root.geometry('1920x1080')
-        active_sessions = db.sel_session_id()
-        self.active_sessions = active_sessions
 
         Frame = ttk.Frame(borderwidth=1, relief=SOLID)
         Frame.place(relx=0.5, rely=0.3, anchor=CENTER)

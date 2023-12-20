@@ -1,13 +1,11 @@
 from tkinter import *
-from tkinter import ttk   
 from database import DatabaseAuth
 import bcrypt
-
-db = DatabaseAuth()
-
 import unittest
 from io import StringIO
 from unittest.mock import patch
+
+db = DatabaseAuth()
 
 
 def register(FIO_entriesAdd, usernameAdd, passwdAdd, roleAdd):
@@ -22,13 +20,6 @@ def register(FIO_entriesAdd, usernameAdd, passwdAdd, roleAdd):
             hash1 = hash.decode('utf-8')
             print(FIO_info,nameGet,role)
             db.insertData(FIO_info, nameGet, hash1, role)
-
-# FIO_entriesAdd = "John Doe Smith"
-# usernameAdd = "johndoe"
-# passwdAdd = "password123"
-# roleAdd = "user"
-
-# register(FIO_entriesAdd, usernameAdd, passwdAdd, roleAdd)
 
 class TestRegistration(unittest.TestCase):
     
@@ -54,6 +45,6 @@ class TestRegistration(unittest.TestCase):
             db.del_user(usernameAdd)
             actual_output = fake_out.getvalue()
         self.assertEqual(actual_output.rstrip(), expected_output)
-
+    
 if __name__ == '__main__':
     unittest.main()

@@ -6,7 +6,7 @@ class DatabaseAuth():
     def __init__(self):
         try:
             self.connection = psycopg2.connect(
-                host="db",
+                host="localhost",
                 user="postgres",
                 password="qwerty",
                 database="postgres"
@@ -160,12 +160,6 @@ class DatabaseAuth():
         self.cur.execute("INSERT INTO active_sessions(user_id, active) VALUES ('"+userID+"', true)")
         self.connection.commit()
 
-    def sel_session_id(self):
-        query = "SELECT * FROM active_sessions"
-        self.cur.execute(query)
-        row = self.cur.fetchall()
-        if row:
-            return row
     def sel_session_id2(self):
         query = "SELECT user_id FROM active_sessions"
         self.cur.execute(query)
