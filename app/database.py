@@ -6,7 +6,7 @@ class DatabaseAuth():
     def __init__(self):
         try:
             self.connection = psycopg2.connect(
-                host="localhost",
+                host="db",
                 user="postgres",
                 password="qwerty",
                 database="postgres"
