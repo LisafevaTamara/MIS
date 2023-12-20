@@ -2,9 +2,10 @@ from tkinter import *
 from tkinter import ttk   
 from database import DatabaseAuth
 import bcrypt
+from prometheus_client import start_http_server, Counter #monitoring
 
 db = DatabaseAuth()
-
+requests_counter_users = Counter('Users_Added', 'Total number of users created') #monitoring
 class AdminPanel:
     def __init__(self):
         self.root = Tk()
@@ -57,6 +58,7 @@ class AdminPanel:
         user_role.pack(side=LEFT)
 
         def register():
+            requests_counter_users.inc() #count
             FIO_info = [fioEntry.get() for fioEntry in FIO_entries]
             FIO_to_string = ' '.join(FIO_info)
             nameGet = usernameInput.get()
