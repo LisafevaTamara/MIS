@@ -38,7 +38,7 @@ def main():
             AdminPanel()
 
     def check():
-        requests_counter.inc() #count
+        requests_counter.inc() #countt
         nameGet = usernameInput.get()
         passwordGet = passwordInput.get()
         inputData = (nameGet, passwordGet,)
