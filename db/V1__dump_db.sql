@@ -189,6 +189,7 @@ COPY public.log (id, fio, login, password, role) FROM stdin;
 33	yr yr utr	qwe	$2b$12$4TyyrMH0/QpD1CABwaRhROjG7E7CTHuZCh44KWEA2sDakndbaI18C	user
 45	kiril kiril kiril	kiril	$2b$12$r4Txgo/PYDPKc2S2VxD3f.3qHHV.T1Q0x3mB8TiGtIItJEss7XVF6	user
 46	pink flamingo hunter	pinflamhunt	$2b$12$FGoLol/zrXXz7FTjH1UtNeCrfFUwpkXuxvFhbFYwVDJKUnO7OI9bW	user
+48  Hacker hacker hacker  hacker  $2b$12$JdAVjHuDXEvsBjK13gagaORBKy9oD1W50gYTqIEHou0oBI5KwzIYe  user
 \.
 
 
