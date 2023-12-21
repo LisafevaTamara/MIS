@@ -11,7 +11,7 @@ db.createActiveSessions()
 requests_counter = Counter('myapp_requests_total', 'Total number of requests received') #monitoring
 
 def main():
-    start_http_server(9090) #start monitoring server on port 9090
+    start_http_server(9190) #start monitoring server on port 9090
     root = Tk()
     root.title('Authorization')
     root.geometry('400x400')
