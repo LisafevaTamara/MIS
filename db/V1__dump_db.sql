@@ -187,6 +187,8 @@ COPY public.log (id, fio, login, password, role) FROM stdin;
 24	John Doe Smith	johndoe	$2b$12$1gdAIuaaXBWC.GiFdfEWluk62kpHkrXvUrPBqSPvEqIbVmwGgquzm	user
 31	qqq www eee	qwerty	$2b$12$K.0y6qv0HyPg/5Ig3frU1OhH87fEibyrB7.ESJjEW9LLSBrR5.pVa	user
 33	yr yr utr	qwe	$2b$12$4TyyrMH0/QpD1CABwaRhROjG7E7CTHuZCh44KWEA2sDakndbaI18C	user
+45	kiril kiril kiril	kiril	$2b$12$r4Txgo/PYDPKc2S2VxD3f.3qHHV.T1Q0x3mB8TiGtIItJEss7XVF6	user
+46	pink flamingo hunter	pinflamhunt	$2b$12$FGoLol/zrXXz7FTjH1UtNeCrfFUwpkXuxvFhbFYwVDJKUnO7OI9bW	user
 \.
 
 

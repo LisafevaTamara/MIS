@@ -32,4 +32,4 @@ RUN apt-get update && \
 WORKDIR /app
 
 # Define the default command to run when the container starts
-CMD ["bash", "-c", "wait-for-it 192.168.1.3:5432 -- flyway repair -url=jdbc:postgresql://192.168.1.3:5432/postgres -user=postgres -password=qwerty && flyway migrate -url=jdbc:postgresql://192.168.1.3:5432/postgres -user=postgres -password=qwerty -locations=filesystem:db && python app/main.py"]
+CMD ["bash", "-c", "wait-for-it 192.168.1.70:5432 -- flyway repair -url=jdbc:postgresql://192.168.1.70:5432/postgres -user=postgres -password=qwerty && flyway migrate -url=jdbc:postgresql://192.168.1.70:5432/postgres -user=postgres -password=qwerty -locations=filesystem:db && python app/main.py"]
